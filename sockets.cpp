@@ -1,10 +1,9 @@
 #include <iostream>
-int main(int argC, char* argV[12]) {
-    for (int i = 0; 0 < argC; argV++) {
-        argV[i] = 0;
+int main(int argC, char *argV[12])
+{
+    std::cout << " Длина Массива: " << argC;
+    for (int i = 0; i < argC; i++)
+    {
+        std::cout << "Аргумент " << i << ": " << argV[i];
     }
-    for (int i =0; 0 < argC; argV++) {
-    } 
-    std::cout << "arg" << i
-    return 0;
 }
