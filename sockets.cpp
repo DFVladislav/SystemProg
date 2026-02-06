@@ -1,9 +1,29 @@
 #include <iostream>
-int main(int argC, char *argV[12])
+using namespace std;
+
+void gethelp()
 {
-    std::cout << " Длина Массива: " << argC;
+    cout << "help" << endl;
+}
+
+int main(int argC, char *argV[])
+{
+    bool needHelp = false;
+
     for (int i = 0; i < argC; i++)
     {
-        std::cout << "Аргумент " << i << ": " << argV[i];
+        string arg = argV[i];
+        if (arg == "--help" )
+
+        {
+            needHelp = true;
+        }
+        cout << "arg" << i << ": " << argV[i] << endl;
     }
+    if (needHelp) {
+        gethelp();
+    }
+   // cout << needHelp;
+
+    return 0;
 }
